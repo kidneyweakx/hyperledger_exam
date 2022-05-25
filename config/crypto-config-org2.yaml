@@ -3,18 +3,21 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+
 # ---------------------------------------------------------------------------
-# "OrdererOrgs" - Definition of organizations managing orderer nodes
+# "PeerOrgs" - Definition of organizations managing peer nodes
 # ---------------------------------------------------------------------------
-OrdererOrgs:
+PeerOrgs:
   # ---------------------------------------------------------------------------
-  # Orderer
+  # Org2
   # ---------------------------------------------------------------------------
-  - Name: Orderer
-    Domain: cathaybc.com
+  - Name: Org2
+    Domain: org2.cathaybc.com
     EnableNodeOUs: true
     Template:
-      Count: 3
+      Count: 1
       SANS:
         - localhost
       Start: 1
+    Users:
+      Count: 1
